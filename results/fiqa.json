@@ -1,0 +1,95 @@
+{
+ "dataset": "fiqa",
+ "docs": 57638,
+ "queries": 648,
+ "engines": [
+  {
+   "engine": "Postgres",
+   "mode": "and",
+   "build_s": 6.13,
+   "index_mb": 109.1,
+   "ndcg10": 0.055,
+   "recall100": 0.0787,
+   "empty_results": 393,
+   "p50_ms": 0.3,
+   "p95_ms": 1.29
+  },
+  {
+   "engine": "Postgres",
+   "mode": "or",
+   "build_s": 6.13,
+   "index_mb": 109.1,
+   "ndcg10": 0.1433,
+   "recall100": 0.3911,
+   "empty_results": 0,
+   "p50_ms": 23.75,
+   "p95_ms": 50.8
+  },
+  {
+   "engine": "SQLite FTS5",
+   "mode": "and",
+   "build_s": 1.76,
+   "index_mb": 84.1,
+   "ndcg10": 0.0274,
+   "recall100": 0.0303,
+   "empty_results": 450,
+   "p50_ms": 1.45,
+   "p95_ms": 5.69
+  },
+  {
+   "engine": "SQLite FTS5",
+   "mode": "or",
+   "build_s": 1.76,
+   "index_mb": 84.1,
+   "ndcg10": 0.2481,
+   "recall100": 0.555,
+   "empty_results": 0,
+   "p50_ms": 42.1,
+   "p95_ms": 85.87
+  },
+  {
+   "engine": "DuckDB FTS",
+   "mode": "and",
+   "build_s": 21.45,
+   "index_mb": 87.3,
+   "ndcg10": 0.003,
+   "recall100": 0.0046,
+   "empty_results": 639,
+   "p50_ms": 11.74,
+   "p95_ms": 18.42
+  },
+  {
+   "engine": "DuckDB FTS",
+   "mode": "or",
+   "build_s": 21.45,
+   "index_mb": 87.3,
+   "ndcg10": 0.2131,
+   "recall100": 0.5225,
+   "empty_results": 0,
+   "p50_ms": 14.97,
+   "p95_ms": 18.3
+  },
+  {
+   "engine": "Tantivy",
+   "mode": "and",
+   "build_s": 1.11,
+   "index_mb": 17.5,
+   "ndcg10": 0.0258,
+   "recall100": 0.0298,
+   "empty_results": 449,
+   "p50_ms": 0.05,
+   "p95_ms": 0.11
+  },
+  {
+   "engine": "Tantivy",
+   "mode": "or",
+   "build_s": 1.11,
+   "index_mb": 17.5,
+   "ndcg10": 0.2509,
+   "recall100": 0.5532,
+   "empty_results": 0,
+   "p50_ms": 0.74,
+   "p95_ms": 1.13
+  }
+ ]
+}
