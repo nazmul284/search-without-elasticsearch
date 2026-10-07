@@ -1,0 +1,40 @@
+{
+ "dataset": "scifact",
+ "variants": [
+  {
+   "engine": "Postgres",
+   "variant": "ts_rank (baseline)",
+   "ndcg10": 0.5597,
+   "p50_ms": 5.59
+  },
+  {
+   "engine": "Postgres",
+   "variant": "ts_rank, length-normalised",
+   "ndcg10": 0.5695,
+   "p50_ms": 5.92
+  },
+  {
+   "engine": "Postgres",
+   "variant": "ts_rank_cd",
+   "ndcg10": 0.3592,
+   "p50_ms": 17.33
+  },
+  {
+   "engine": "Postgres",
+   "variant": "ts_rank_cd, length-normalised",
+   "ndcg10": 0.4036,
+   "p50_ms": 17.39
+  },
+  {
+   "engine": "Postgres",
+   "variant": "'simple' config, ts_rank",
+   "ndcg10": 0.4711,
+   "p50_ms": 13.38
+  },
+  {
+   "engine": "SQLite FTS5",
+   "variant": "no stemmer (unicode61)",
+   "ndcg10": 0.6684
+  }
+ ]
+}

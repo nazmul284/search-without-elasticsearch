@@ -1,0 +1,40 @@
+{
+ "dataset": "fiqa",
+ "variants": [
+  {
+   "engine": "Postgres",
+   "variant": "ts_rank (baseline)",
+   "ndcg10": 0.1437,
+   "p50_ms": 24.03
+  },
+  {
+   "engine": "Postgres",
+   "variant": "ts_rank, length-normalised",
+   "ndcg10": 0.1913,
+   "p50_ms": 24.8
+  },
+  {
+   "engine": "Postgres",
+   "variant": "ts_rank_cd",
+   "ndcg10": 0.0278,
+   "p50_ms": 72.51
+  },
+  {
+   "engine": "Postgres",
+   "variant": "ts_rank_cd, length-normalised",
+   "ndcg10": 0.0439,
+   "p50_ms": 73.06
+  },
+  {
+   "engine": "Postgres",
+   "variant": "'simple' config, ts_rank",
+   "ndcg10": 0.0781,
+   "p50_ms": 110.72
+  },
+  {
+   "engine": "SQLite FTS5",
+   "variant": "no stemmer (unicode61)",
+   "ndcg10": 0.2342
+  }
+ ]
+}

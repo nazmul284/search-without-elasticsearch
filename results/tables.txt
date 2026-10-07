@@ -28,3 +28,15 @@ Postgres                     274             393
 SQLite FTS5                  284             450
 Tantivy                      284             449
 DuckDB FTS                   300             639
+
+
+Can configuration fix Postgres? nDCG@10, 'any word' queries
+
+variant                                 SciFact    FiQA
+-------------------------------------   -------  ------
+Postgres ts_rank (baseline)               0.560   0.144
+Postgres ts_rank, length-normalised       0.570   0.191
+Postgres ts_rank_cd                       0.359   0.028
+Postgres ts_rank_cd, length-normalised    0.404   0.044
+Postgres 'simple' config, ts_rank         0.471   0.078
+SQLite no stemmer (unicode61)             0.668   0.234

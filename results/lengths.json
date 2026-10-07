@@ -1,0 +1,7 @@
+{
+ "relevant_docs_median_words": 139.5,
+ "corpus_median_words": 90.0,
+ "Postgres ts_rank": 623.0,
+ "Tantivy": 157.5,
+ "SQLite FTS5": 137.0
+}

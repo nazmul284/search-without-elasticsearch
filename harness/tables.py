@@ -20,3 +20,12 @@ for name in ("Postgres", "SQLite FTS5", "Tantivy", "DuckDB FTS"):
     a = next(e for e in S["engines"] if e["engine"] == name and e["mode"] == "and")
     b = next(e for e in F["engines"] if e["engine"] == name and e["mode"] == "and")
     print(f"{name:14}{a['empty_results']:>18}{b['empty_results']:>16}")
+
+print("\n")
+print("Can configuration fix Postgres? nDCG@10, 'any word' queries\n")
+print(f"{'variant':38}{'SciFact':>9}{'FiQA':>8}")
+print(f"{'-'*37:38}{'-'*7:>9}{'-'*6:>8}")
+TS, TF = (json.loads((R / f"tuning_{x}.json").read_text()) for x in ("scifact", "fiqa"))
+for a, b in zip(TS["variants"], TF["variants"]):
+    lab = f"{a['engine']}: {a['variant']}".replace("Postgres: ", "Postgres ").replace("SQLite FTS5: ", "SQLite ")
+    print(f"{lab:38}{a["ndcg10"]:>9.3f}{b['ndcg10']:>8.3f}")
